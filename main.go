@@ -18,7 +18,7 @@ func sayHello(w http.ResponseWriter, r *http.Request) {
 func main() {
   http.HandleFunc("/_status", status)
   http.HandleFunc("/", sayHello)
-  if err := http.ListenAndServe(":80", nil); err != nil {
+  if err := http.ListenAndServe(":8080", nil); err != nil {
     panic(err)
   }
 }
